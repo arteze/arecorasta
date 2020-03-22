@@ -23,7 +23,7 @@ function bajar_estilo(url){
     var no_es_html = minúsculas.match(/^<!doctype html>/)==null
     var es_css = no_es_html
     if(es_css){
-      console.log()
+      console.log(es_css)
     }
   })
 }
