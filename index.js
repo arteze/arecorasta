@@ -17,10 +17,19 @@ function bajar(url,json,retrollamada){
     :x.text()
   ).then(retrollamada)
 }
-function insertar_estilo(url,texto){
+function insertar_estilo_desde_texto(url,texto){
   var estilo = document.createElement("style")
   estilo.innerHTML = texto
   estilo.setAttribute("href",url)
+  document.head.appendChild(estilo)
+}
+function insertar_estilo_desde_ruta(url){
+  var estilo = document.createElement("link")
+  var ahora = Date.now()
+  var url_ahora = url + "?" + Date.now()
+  estilo.setAttribute("rel","stylesheet")
+  estilo.href = url_ahora
+  console.log(url_ahora,estilo)
   document.head.appendChild(estilo)
 }
 function bajar_estilo(url){
@@ -29,7 +38,9 @@ function bajar_estilo(url){
     var no_es_html = minúsculas.match(/^<!doctype html>/)==null
     var es_css = no_es_html
     if(es_css){
-      insertar_estilo(url,x)
+      insertar_estilo_desde_texto(url,x)
+    }else{
+      insertar_estilo_desde_ruta(url)
     }
   })
 }
