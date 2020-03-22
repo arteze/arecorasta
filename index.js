@@ -10,7 +10,12 @@ function bajar(url,json,retrollamada){
     case true:tipo="json";break;
     case "json":tipo="json";break;
   }
-  fetch(url).then(x=>x[tipo]()).then(retrollamada)
+  fetch(url)
+  .then(
+    x=>tipo=="text"?x.text()
+    :tipo=="json"?x.json()
+    :x.text()
+  ).then(retrollamada)
 }
 function bajar_estilo(url){
   bajar(url,"texto",x=>console.log(3,x,4))
