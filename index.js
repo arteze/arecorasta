@@ -49,5 +49,8 @@ function bajar_estilo(url,dominio){
     }
   })
 }
-var url_estilo = location.href+"estilo.css"
- bajar_estilo(url_estilo,"https://arteze.github.io/codersrank")
+function programa(){
+  var url_estilo = location.href+"estilo.css"
+  bajar_estilo(url_estilo,"https://arteze.github.io/codersrank")
+}
+programa()
