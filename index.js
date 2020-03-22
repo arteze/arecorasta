@@ -19,9 +19,13 @@ function bajar(url,json,retrollamada){
 }
 function bajar_estilo(url){
   bajar(url,"texto",x=>{
-    console.log(x.match(/^<!DOCTYPE html>/)==nul)
+    var minúsculas = x.toLowerCase()
+    var no_es_html = minúsculas.match(/^<!doctype html>/)==null
+    var es_css = no_es_html
+    if(es_css){
+      console.log()
+    }
   })
 }
 var url_estilo = location.href+"estilo.css"
-console.log(url_estilo)
 bajar_estilo(url_estilo)
