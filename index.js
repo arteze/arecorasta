@@ -1,4 +1,4 @@
-import './estilo.css'; // Usar import está mal, mejor usar fetch.
+// import './estilo.css'; // Usar import está mal, mejor usar fetch.
 
 function bajar(url,json,retrollamada){
   var tipo = undefined
@@ -23,15 +23,16 @@ function insertar_estilo_desde_texto(url,texto){
   estilo.setAttribute("href",url)
   document.head.appendChild(estilo)
 }
-function insertar_estilo_desde_ruta(url){
+function insertar_estilo_desde_ruta(url,dominio){
   var estilo = document.createElement("link")
   var ahora = Date.now()
-  var url_ahora = url + "?" + "tiempo=" + Date.now()
+  var url_2 = dominio && url.replace(location.origin,dominio)
+  var url_ahora = url_2 + "?" + "tiempo=" + Date.now()
   estilo.setAttribute("rel","stylesheet")
   estilo.href = url_ahora
   document.head.appendChild(estilo)
 }
-function bajar_estilo(url){
+function bajar_estilo(url,dominio){
   bajar(url,"texto",x=>{
     var minúsculas = x.toLowerCase()
     var no_es_html = minúsculas.match(/^<!doctype html>/)==null
@@ -41,7 +42,7 @@ function bajar_estilo(url){
     }else{
       console.log("No se pudo bajar el estilo desde StackBlitz.")
       try{
-        insertar_estilo_desde_ruta(url)
+        insertar_estilo_desde_ruta(url,dominio)
       }catch(e){
         console.log("No se pudo agregar el estilo al head.")
       }
@@ -49,4 +50,4 @@ function bajar_estilo(url){
   })
 }
 var url_estilo = location.href+"estilo.css"
-// bajar_estilo(url_estilo)
+ bajar_estilo(url_estilo,"https://arteze.github.io/codersrank")
