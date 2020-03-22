@@ -18,7 +18,7 @@ function bajar(url,json,retrollamada){
   ).then(retrollamada)
 }
 function bajar_estilo(url){
-  bajar(url,"texto",x=>console.log(3,x,4))
+  bajar(url,"texto",x=>console.log(x.match(/^<!DOCTYPE html>/)))
 }
 var url_estilo = location.href+"estilo.css"
 console.log(url_estilo)
