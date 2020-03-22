@@ -21,6 +21,7 @@ function insertar_estilo(url,texto){
   var estilo = document.createElement("style")
   estilo.innerHTML = texto
   estilo.setAttribute("href",url)
+  document.head.appendChild(estilo)
 }
 function bajar_estilo(url){
   bajar(url,"texto",x=>{
