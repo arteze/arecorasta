@@ -26,10 +26,9 @@ function insertar_estilo_desde_texto(url,texto){
 function insertar_estilo_desde_ruta(url){
   var estilo = document.createElement("link")
   var ahora = Date.now()
-  var url_ahora = url + "?" + Date.now()
+  var url_ahora = url + "?" + "tiempo=" + Date.now()
   estilo.setAttribute("rel","stylesheet")
   estilo.href = url_ahora
-  console.log(url_ahora,estilo)
   document.head.appendChild(estilo)
 }
 function bajar_estilo(url){
@@ -40,7 +39,12 @@ function bajar_estilo(url){
     if(es_css){
       insertar_estilo_desde_texto(url,x)
     }else{
-      insertar_estilo_desde_ruta(url)
+      console.log("No se pudo bajar el estilo desde StackBlitz.")
+      try{
+        insertar_estilo_desde_ruta(url)
+      }catch(e){
+        console.log("No se pudo agregar el estilo al head.")
+      }
     }
   })
 }
