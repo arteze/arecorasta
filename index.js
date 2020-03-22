@@ -1,4 +1,4 @@
-// import './style.css'; // Usar import está mal, mejor usar fetch.
+import './estilo.css'; // Usar import está mal, mejor usar fetch.
 
 function bajar(url,json,retrollamada){
   var tipo = undefined
@@ -49,4 +49,4 @@ function bajar_estilo(url){
   })
 }
 var url_estilo = location.href+"estilo.css"
-bajar_estilo(url_estilo)
+// bajar_estilo(url_estilo)
