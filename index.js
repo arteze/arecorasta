@@ -22,4 +22,4 @@ function bajar_estilo(url){
 }
 var url_estilo = location.href+"estilo.css"
 console.log(url_estilo)
-bajar(url_estilo)
+bajar_estilo(url_estilo)
