@@ -1,6 +1,7 @@
 // import './style.css'; // Usar import está mal, mejor usar fetch.
 
 function bajar(url,json,retrollamada){
+  var tipo = undefined
   switch(json){
     case false:tipo="text";break;
     case "text":tipo="text";break;
