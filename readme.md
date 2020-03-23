@@ -1,6 +1,6 @@
 # ArtEze practicando en CodersRank y StackBlitz
 
-ArtEze practicando en StackBlitz.
+ArtEze practicando en _CodersRank_ y _StackBlitz_.
 
 [Editar en StackBlitz ⚡️](https://stackblitz.com/edit/codersrank-template-cdox7e)
 
