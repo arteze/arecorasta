@@ -6,8 +6,6 @@ ArtEze practicando en StackBlitz.
 
 ## Enlaces
 
- - _Página en StackBlitz:_ https://codersrank-template-cdox7e.stackblitz.io
- 
  - _Página en StackBlitz_: https://codersrank-template-cdox7e.stackblitz.io
 
  - _Proyecto en GitHub_: https://github.com/arteze/codersrank
