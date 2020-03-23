@@ -51,6 +51,6 @@ function bajar_estilo(url,dominio){
 }
 function programa(){
   var url_estilo = location.href+"estilo.css"
-  bajar_estilo(url_estilo,"https://arteze.github.io/codersrank")
+  bajar_estilo(url_estilo,"https://arteze.github.io/arecorasta")
 }
 programa()
