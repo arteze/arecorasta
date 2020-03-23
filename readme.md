@@ -1,4 +1,4 @@
-# ArtEze practicando en CodersRank y StackBlitz
+# arecorasta
 
 ArtEze practicando en _CodersRank_ y _StackBlitz_.
 
@@ -6,10 +6,10 @@ ArtEze practicando en _CodersRank_ y _StackBlitz_.
 
 ## Enlaces
 
- - _Página en StackBlitz_: https://codersrank-template-cdox7e.stackblitz.io
+ - _Proyecto en GitHub_: https://github.com/arteze/arecorasta
 
- - _Proyecto en GitHub_: https://github.com/arteze/codersrank
+ - _Página en GitHub Pages_: https://arteze.github.io/arecorasta
+
+- _Página en StackBlitz_: https://codersrank-template-cdox7e.stackblitz.io
 
  - _Usuario en CodersRank_: https://profile.codersrank.io/user/arteze
-
- - _Página en GitHub Pages_: https://arteze.github.io/codersrank
